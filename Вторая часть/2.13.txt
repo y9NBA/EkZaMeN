@@ -1,0 +1,10 @@
+#2.13
+from random import randint
+x=-8
+y=15
+m=[[randint(x,y) for i in range(5)]for f in range (5)]
+for i in range(5):
+ maxx=max(m[i])
+ m[i][m[i].index(maxx)]=-(m[i][m[i].index(maxx)])
+for i in range (5):
+ print(m[i])

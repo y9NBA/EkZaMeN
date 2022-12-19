@@ -1,0 +1,15 @@
+#2.16
+from random import randint
+x=0
+y=50
+m=[[randint(x,y)for i in range(5)] for k in range (6)]
+print('Исходная матрица:')
+for i in range (6):
+    print(m[i])
+d=[0]*5
+for i in range(5):
+    for k in range(6):
+        if m[k][i]%2==0 and m[k][i]!=0:
+            d[i]=m[k][i]
+            break
+print('Список:',d,sep='\n')

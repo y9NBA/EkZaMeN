@@ -1,0 +1,9 @@
+#2.2
+N=int(input('Введите длину массива: '))
+d=[]
+for i in range(N):
+    if i%2==0:
+        d.append(0)
+    else:
+        d.append(1)
+print(d)

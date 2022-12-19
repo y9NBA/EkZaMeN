@@ -1,0 +1,15 @@
+#2.12
+from random import randint
+x=0
+y=50
+m=[[randint(x,y) for i in range(6)]for f in range (5)]
+d=[]
+for i in range(len(m[0])):
+ pr=1
+ for k in range(len(m)):
+  if m[k][i]>0 and m[k][i]%2==0:
+   pr*=m[k][i]
+ d.append(pr)
+for i in range (len(m)):
+ print(m[i])
+print('Список:', d,sep='\n')

@@ -1,0 +1,17 @@
+#2.14
+from random import randint
+u=int(input('Введите число, которое будет сравниваться: '))
+x=0
+y=50
+m=[[randint(x,y)for i in range(6)] for k in range (4)]
+for i in range (4):
+ print(m[i])
+d=[]
+print('Исходная матрица:')
+for i in range(len(m)):
+    n=0
+    for k in range (len(m[i])):
+        if m[i][k]>u:
+            n+=1
+    d.append(n)
+print('Список:',d,sep='\n')

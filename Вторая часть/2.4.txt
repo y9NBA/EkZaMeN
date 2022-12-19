@@ -1,0 +1,3 @@
+#2.4
+d=[pow(2,i) for i in range (1,int(input('Введите число N: '))+1)]
+print(d)

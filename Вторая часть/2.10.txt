@@ -1,0 +1,6 @@
+#2.10
+m=[[i for i in range (7,0,-1)] for f in range (7)]
+for i in range (0,7,2):
+ m[i].sort()
+for i in range (7):
+ print(m[i])

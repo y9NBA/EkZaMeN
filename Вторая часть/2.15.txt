@@ -1,0 +1,14 @@
+#2.15
+from random import randint
+x=-8
+y=15
+m=[[randint(x,y)for i in range(5)] for k in range (5)]
+print('Исходная матрица:')
+for i in range (5):
+    print(m[i])
+for i in range(5):
+    for k in range(3):
+        m[i][k]=pow(m[i][k], 2)
+print('Полученная матрица:')
+for i in range (5):
+    print(m[i])

@@ -1,0 +1,15 @@
+#2.17
+#1 способ
+a=[i for i in range(10)]
+print(a)
+k=int(input())
+del(a[k])
+print(a)
+#2 способ (более правильный)
+a=[i for i in range(10)]
+print(a)
+k=int(input())
+for i in range(k,len(a)-1):
+    a[i], a[i+1]=a[i+1], a[i]
+a.pop()
+print(a)

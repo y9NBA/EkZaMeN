@@ -1,0 +1,6 @@
+#2.7
+d=[int(input('Введите число: ')) for i in range(int(input('Введите длину массива: ')))]
+print('Исходный массив:', d, sep='\n')
+for i in range(1,len(d)-1):
+    d[i]=d[i]+5
+print('Полученный массив:', d, sep='\n')

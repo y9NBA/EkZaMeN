@@ -1,0 +1,5 @@
+#2.3
+from random import randint
+x,y=20,100
+d=[randint(x,y) for i in range(int(input('Введите длину массива: ')))]
+print(d)

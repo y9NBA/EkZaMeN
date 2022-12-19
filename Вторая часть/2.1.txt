@@ -1,0 +1,7 @@
+#2.1
+from random import randint
+d=[randint(0,100) for i in range(int(input('Введите длину массива: ')))]
+print(d)
+for i in range (len(d)):
+ d[i]=d[i]*2
+print(d)

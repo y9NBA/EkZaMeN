@@ -1,0 +1,5 @@
+#2.5
+from random import randint
+x,y=10,30
+d=[randint(x,y) for i in range(22)]
+print(d)

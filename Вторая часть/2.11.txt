@@ -1,0 +1,8 @@
+#2.11
+m=[[0 for i in range (10)] for f in range (10)]
+for i in range(0,10):
+ for f in range(0,10-i):
+   m[i][f]=f+1
+ m[i].sort()
+for i in range (10):
+ print(m[i])
