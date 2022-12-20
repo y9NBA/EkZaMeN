@@ -169,3 +169,92 @@ for i in range(k,len(a)-1):
     a[i], a[i+1]=a[i+1], a[i]
 a.pop()
 print(a)
+
+#2.18
+from random import randint
+x, y=0, 50
+y=50
+m=[randint(1,10) for i in range(10)]
+print('Исходный массив:',m, sep='\n')
+k=int(input('Введите индекс K: '))
+c=int(input('Введите число C: '))
+i=len(m)
+m.append(c)
+#for i in range (len(m)-1, len(m)-k-1, -1): #2способ
+#	m[i], m[i-1]=m[i-1], m[i]
+while i>k: #1 способ
+	m[i], m[i-1]=m[i-1], m[i]
+	i-=1
+print('Полученный массив:',m,sep='\n')
+
+#2.19
+from random import randint
+x, y=0, 50
+y=50
+n=0
+m=[1,2,22,0,34,22,5,6,7,2]
+print('Исходный массив:',m, sep='\n')
+for i in m:
+	if (m.count(i))%2==0 or (m.count(i))//2!=0:
+		n+=m.count(i)//2
+		for k in range(m.count(i)):
+			del(m[m.index(i)])
+print('Пар одинаковых чисел в массиве:',n)
+
+#2.20
+def capitalize(s):
+	for i in range(len(s)):
+		s[i]=s[i].capitalize()
+	return s
+print(' '.join(capitalize(input().split())))
+
+#2.21
+s = input()
+dct = {}
+for i in s.split(" "):
+ if not i in dct: dct[i] = 1
+ else: dct[i] += 1
+for i in dct.items():
+ print(f"{i[0]}: {i[1]}")
+
+#2.22
+dct= {
+ 'Красный':'Red',
+ 'Зелёный': 'Green',
+ 'Синий':'Blue'
+}
+print(list(dct.values())[-1])
+
+#2.23
+text = """3
+Я проснулся и справил нужды. Ах, птички за окном поют и сирень цветущая взмывает к солнцу. 
+Пошёл, приготовил завтрак, заварил кофейку и утро удалось. 
+Сижу, держа взгляд на окне, а на подоконнике сидят две птички, нежно беседуя о чём-то.
+"""
+z = [",", "."]
+dct = {}
+for i in text.split("\n")[1:]:
+ for x in z: i = i.replace(x, "")
+ for j in i.split(" "):
+  if j == "": continue
+  if j in dct: dct[j] += 1
+  else: dct[j] = 1
+print(list(dct.keys())[list(dct.values()).index(max(list(dct.values())))])
+
+#2.38
+s='      gfd fgf f' #Строка с начальными пробелами (типо пробелы в начале) 
+def delspace(s):
+	s=s.split()
+	s=' '.join(s)
+	return s
+print(delspace(s)) #Сделал так, как понял, свои предложения решения отсылайте мне в лс
+
+#2.39
+def sravnenye(a, b):
+	if len(a)>len(b):
+		print('В первом числе больше цифр, чем во втором')
+	elif len(a)<len(b):
+		print('Во втором числе больше цифр, чем в первом')
+	else:
+		print('Числа содержат одинаковое количество цифр')
+sravnenye(input('Введите первое число: '),input('Введите второе число: '))

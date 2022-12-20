@@ -1,0 +1,6 @@
+#2.20
+def capitalize(s):
+	for i in range(len(s)):
+		s[i]=s[i].capitalize()
+	return s
+print(' '.join(capitalize(input().split())))

@@ -1,0 +1,16 @@
+#2.18
+from random import randint
+x, y=0, 50
+y=50
+m=[randint(1,10) for i in range(10)]
+print('Исходный массив:',m, sep='\n')
+k=int(input('Введите индекс K: '))
+c=int(input('Введите число C: '))
+i=len(m)
+m.append(c)
+#for i in range (len(m)-1, len(m)-k-1, -1): #2способ
+#	m[i], m[i-1]=m[i-1], m[i]
+while i>k: #1 способ
+	m[i], m[i-1]=m[i-1], m[i]
+	i-=1
+print('Полученный массив:',m,sep='\n')

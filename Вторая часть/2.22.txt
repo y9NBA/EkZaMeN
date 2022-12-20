@@ -1,0 +1,7 @@
+#2.22
+dct= {
+ 'Красный':'Red',
+ 'Зелёный': 'Green',
+ 'Синий':'Blue'
+}
+print(list(dct.values())[-1])

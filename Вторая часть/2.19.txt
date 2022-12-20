@@ -1,0 +1,13 @@
+#2.19
+from random import randint
+x, y=0, 50
+y=50
+n=0
+m=[1,2,22,0,34,22,5,6,7,2]
+print('Исходный массив:',m, sep='\n')
+for i in m:
+	if (m.count(i))%2==0 or (m.count(i))//2!=0:
+		n+=m.count(i)//2
+		for k in range(m.count(i)):
+			del(m[m.index(i)])
+print('Пар одинаковых чисел в массиве:',n)

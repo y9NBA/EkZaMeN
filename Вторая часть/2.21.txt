@@ -1,0 +1,8 @@
+#2.21
+s = input()
+dct = {}
+for i in s.split(" "):
+ if not i in dct: dct[i] = 1
+ else: dct[i] += 1
+for i in dct.items():
+ print(f"{i[0]}: {i[1]}")
