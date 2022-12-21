@@ -241,6 +241,80 @@ for i in text.split("\n")[1:]:
   else: dct[j] = 1
 print(list(dct.keys())[list(dct.values()).index(max(list(dct.values())))])
 
+#2.24
+dct={
+    'Кострома':'Россия',
+    'Сан-Франциско':'США',
+    'Лондон':'Великобритания'} #Список городов и стран представил в виде словаря
+grds=[]
+for i in range (len(list(dct.keys()))):
+    grds.append(input('Введите город: '))
+for i in grds:
+    print(dct.get(i))
+
+#2.25
+k=open('2.25.1.txt', 'r', encoding="utf-8")
+k=k.readlines()
+for i in k:
+    n=0
+    n=i.find('вич')
+    if n==-1:
+        n=i.find('вна')
+    if i.count('+')!=0:
+        print (i[0:n+3])
+#Текст к задаче
+#Зубнов Родион Алексеевич Обручева 28к1 кв17 +1234111724640
+#Зубенко Михаил Петрович ул. Шагова 183 кв 32 +279343467
+#Щербинов Артём Михайлович 8 квартал дом 11
+#Виноградова Светлана Сергеевна ыып 778 ывав
+
+#2.26
+from random import randint
+k=open('2.26.1.txt', 'w') #2.26.1.txt и 2.26.2.txt - пустые файлы
+A=[(randint(0,100)) for i in range(int(input('Введите количество элементов ')))]
+for i in A
+    k.writelines(str(i)+'n')
+k.close()
+k=open('2.26.1.txt', 'r')
+re=k.readlines()
+k.close()
+for i in range(len(re))
+    if re[i]=='n'
+        re[i].pop()
+Re=[int(i) for i in re
+    if int(i)%2==0]
+k=open('2.26.2.txt', 'w')
+for i in Re
+    k.writelines(str(i)+'n')
+k.close()
+
+#2.29
+k=open('2.29.1.txt', 'r') #Файл с действительными числами
+f=k.readlines()
+k.close()
+A=[float(i) for i in f]
+pr=1
+for i in A:
+    pr*=i
+print('Произведение чисел из файла:', pr, sep='\n')
+
+#2.32
+from random import randint
+k=open('2.32.1.txt', 'w')
+for i in ([(str(randint(0,100))) for _ in range (int(input('Введите количество чисел: ')))]):
+    k.writelines(i+'\n')
+k.close()
+k=open('2.32.1.txt', 'r')
+n=int(input('Введите число, на которое будут делиться числа из файла без остатка: '))
+m=int(input('Введите число, на которое не будут делиться числа из файла без остатка: '))
+Re=[int(i) for i in (k.readlines())
+    if int(i)%n==0 and int(i)%m!=0]
+k.close()
+k=open('2.32.2.txt', 'w')
+for i in Re:
+    k.writelines(str(i)+'\n')
+k.close()
+
 #2.38
 s='      gfd fgf f' #Строка с начальными пробелами (типо пробелы в начале) 
 def delspace(s):
