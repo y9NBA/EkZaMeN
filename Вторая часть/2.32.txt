@@ -1,0 +1,16 @@
+#2.32
+from random import randint
+k=open('2.32.1.txt', 'w')
+for i in ([(str(randint(0,100))) for _ in range (int(input('Введите количество чисел: ')))]):
+    k.writelines(i+'\n')
+k.close()
+k=open('2.32.1.txt', 'r')
+n=int(input('Введите число, на которое будут делиться числа из файла без остатка: '))
+m=int(input('Введите число, на которое не будут делиться числа из файла без остатка: '))
+Re=[int(i) for i in (k.readlines())
+    if int(i)%n==0 and int(i)%m!=0]
+k.close()
+k=open('2.32.2.txt', 'w')
+for i in Re:
+    k.writelines(str(i)+'\n')
+k.close()

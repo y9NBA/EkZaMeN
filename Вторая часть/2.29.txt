@@ -1,0 +1,9 @@
+#2.29
+k=open('2.29.1.txt', 'r') #Файл с действительными числами
+f=k.readlines()
+k.close()
+A=[float(i) for i in f]
+pr=1
+for i in A:
+    pr*=i
+print('Произведение чисел из файла:', pr, sep='\n')

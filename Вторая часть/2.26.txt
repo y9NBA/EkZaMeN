@@ -1,0 +1,19 @@
+#2.26
+from random import randint
+k=open('2.26.1.txt', 'w') #2.26.1.txt и 2.26.2.txt - пустые файлы
+A=[(randint(0,100)) for i in range(int(input('Введите количество элементов ')))]
+for i in A
+    k.writelines(str(i)+'n')
+k.close()
+k=open('2.26.1.txt', 'r')
+re=k.readlines()
+k.close()
+for i in range(len(re))
+    if re[i]=='n'
+        re[i].pop()
+Re=[int(i) for i in re
+    if int(i)%2==0]
+k=open('2.26.2.txt', 'w')
+for i in Re
+    k.writelines(str(i)+'n')
+k.close()
